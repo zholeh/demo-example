@@ -1,0 +1,119 @@
+body 
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    margin: auto
+    font-family: 'Montserrat', sans-serif
+    user-select: none
+
+.btn-fonts 
+    display: flex
+    justify-content: flex-end
+    padding-right: 5px
+
+
+.btn-fonts >
+    button 
+        text-transform: uppercase
+        background: none
+        border: none
+        cursor: pointer
+        margin: 5px
+        transition: all .2s ease-in
+    
+    button:hover
+        transform: scale(1.2)
+
+
+.btn-fonts .btn-fonts__first 
+    color: gray
+
+.btn-fonts .btn-fonts__second 
+    color: red
+
+.card-fonts 
+    border: 1px solid gray
+    border-radius: 5px
+    padding: 20px
+    min-height: 50vh
+    display: flex
+
+    .card-fonts__left-column
+        flex: 40 40
+        display: flex
+        flex-flow: column
+        justify-content: center
+    
+    .card-fonts__right-column
+        flex: 60 60
+        display: flex
+        flex-flow: column
+        justify-content: center
+    
+    .card-font:active
+        opacity: .5
+    
+    .card-font
+        padding: 10px
+        display: inline-flex
+        flex-wrap: nowrap
+        cursor: pointer
+
+    .card-font__text
+        display: inline
+        margin: 5px
+        height: 100%
+        flex: 1 1 auto
+
+    .card-font__text::before 
+        content: "\2022"
+        margin: 0 5px
+        color: gray
+        font-size: 2em
+
+    
+
+.group-by-fonts 
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-content: center
+    flex: 1 0
+    padding: 20px
+
+.card-fonts__left-column
+    .colored-box
+        width: 100px
+        height: 100px
+.card-fonts__right-column
+    .colored-box
+        width: 80px
+        height: 80px
+
+.colored-box 
+
+    display: block
+    border-radius: 20px
+    border: 1px solid black 
+    position: relative
+    padding: 2px
+    flex: 0 0 auto
+
+    .colored-box__inner-box
+        background: green
+        width: 100%
+        height: 100%
+        border-radius: 18px
+
+        .colored-box__letter
+            position: absolute
+            bottom: 0
+            margin-left: 4px
+            margin-bottom: 4px
+            font-size: 2em
+
+@media screen and ( max-width:  550px) 
+    .card-fonts 
+        .card-font
+            flex-wrap: wrap
+    
